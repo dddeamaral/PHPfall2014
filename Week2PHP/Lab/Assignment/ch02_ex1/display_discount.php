@@ -22,7 +22,7 @@
         $discount_formatted = "$".  number_format($discount, 2);
         $discount_price_formatted = "$".  number_format($discount_price, 2);
             
-       
+        if(empty($product_description))
          
         
         ?> 
