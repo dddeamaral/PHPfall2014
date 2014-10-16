@@ -11,9 +11,12 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        include './index.html';
-        if ( empty)
+      
         
+        if ( empty($_POST['product_description']) === true ){
+            $errorMsg = 'Product Description cannot be a null value.';
+        }
+          include './index.html';
         ?>
     </body>
 </html>

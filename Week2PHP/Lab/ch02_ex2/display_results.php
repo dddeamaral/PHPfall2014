@@ -3,7 +3,7 @@
     $investment = $_POST['investment'];
     $interest_rate = $_POST['interest_rate'];
     $years = $_POST['years'];
-    $date = date('10.15.2014');
+    $date = date('Y-m-d');
     // validate investment entry
     if ( empty($investment) ) {
         $error_message = 'Investment is a required field.'; }
