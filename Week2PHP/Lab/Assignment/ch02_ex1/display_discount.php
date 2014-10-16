@@ -16,15 +16,29 @@
         //Calculations
         $discount = $list_price * $discount_percent *.01;
         $discount_price = $list_price - $discount;
-        //formatting the information
-        $list_price_formatted = "$".  number_format($list_price, 2);
+        //formatting the information number_format($list_price, 1)
+        $list_price_formatted = "$". number_format($list_price, 2);
         $discount_percent_formatted = $discount_percent."%";
         $discount_formatted = "$".  number_format($discount, 2);
         $discount_price_formatted = "$".  number_format($discount_price, 2);
             
-        if(empty($product_description))
+        if(empty($product_description)){
+            $error_message = 'You need to enter a product description.';
+        } else if (is_numeric($product_description) || !is_string($product_description)){
+            $error_message = 'This value must be a string';
+        }else if ( empty($list_price) ) {
+        $error_message = 'List Price is a required field.'; }
+        else if ( !is_numeric($list_price) || is_string($list_price) )  {
+        $error_message = 'List Price must be a valid number.'; }
          
-        
+         else {
+        $error_message = ''; }
+
+    // if an error message exists, go to the index page
+    if ($error_message != '') {
+        include('index.php');
+        exit();
+    }
         ?> 
     
     <div id="content">
