@@ -42,5 +42,36 @@
     }
             
         ?>
+        
+          <div id="content">
+        <h1>This is your Information!!!</h1>
+
+        <label>Name:</label>
+        <span><?php echo $fullName; ?></span><br />
+
+        <label>Phone:</label>
+        <span><?php echo $phoneNum; ?></span><br />
+
+        <label>Email:</label>
+        <span><?php echo $email; ?></span><br />
+
+        <label>Zip Code:</label>
+        <span><?php echo $zipCode; ?></span><br />
+
+        <p>&nbsp;</p>
+    </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </body>
 </html>
