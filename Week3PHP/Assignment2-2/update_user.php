@@ -15,9 +15,9 @@
         if(!is_numeric($phone)){
             $error_message = "Your phone number must be only in digits";
             include ('Errorpage.php');
-        } else if (strlen($phone) > 7){
+        } else if ($phone.length > 7){
             $error_message = 'Your phone number must be at least 7 digits long';
-        } else if (strlen($zip) < 5 && strlen($zip)>5){
+        } else if ($zip.length < 5 && $zip.length >5){
             $error_message = 'Your ZIP Code must be 5 digits long';
         } else if(is_numeric($name)){
             $error_message = 'Your name must not contain numbers';
@@ -29,15 +29,12 @@
                     . "zip = '$zip', $phone = 'phone' where id = '$id';";
             $db->execute($updatequery);
             
-           
+            
             
         }
             
         
         
         ?>
-        <a href = "view_page.php">Go back to table</a>
-        <a href = "add_user.php">Add a user</a>
-        
     </body>
 </html>
