@@ -41,14 +41,15 @@
         if($error_message == ''){
         if ( $sql->execute() && $sql->rowCount() > 0 ){
         echo 'Data has been saved';
+        
         } else {
             echo 'Data is not saved';
         }
         } else {
             echo $error_message;
         }
-         
-        
         ?>
+       <a href="form.php">Add User</a>
+       <a href="view_page.php">view Data</a>
     </body>
 </html>

@@ -27,13 +27,14 @@
                      echo '<td>', $value['fullname'] ,'</td>';
                      echo '<td>', $value['phone'] ,'</td>';
                      echo '<td>', $value['zip'] ,'</td>';          
-                     echo '<td><a href="update_page.php">Update</a></td>';          
+                     echo '<td><a href="update_page.php?id=',$value['id'],'">Update</a></td>';          
                      echo '<td><a href="delete_user.php?id=',$value['id'],'">Delete</a></td>';          
                     echo '</tr>';
                 }
                 echo '</table>';
             }
-        
+                
         ?>
+         <a href="form.php">Add User</a>
     </body>
 </html>
