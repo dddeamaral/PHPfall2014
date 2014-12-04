@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php 
-        var_dump($_POST);
+       
         
         
         $db = new PDO("mysql:host=localhost;dbname=phpclassfall2014", "root", "");
@@ -48,7 +48,7 @@
         
         <input type="hidden" name="id" value = "<?php echo $id; ?>"/>
         
-        <input type = "submit" name="submit_button" action="update_user.php"/>
+        <input type = "submit" value="submit"/>
         
        <?php 
        
