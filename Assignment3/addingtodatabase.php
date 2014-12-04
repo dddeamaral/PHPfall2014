@@ -19,12 +19,12 @@ if(strlen($passwords)< 4){
     include('error.php');
 } else {
     
-    $passwords = sha1($passwords);
+    $hashword = sha1($passwords);
     require_once('database.php');
     $query = "INSERT INTO signup
                     (id, email, password)
              VALUES
-             ('','$email','$passwords');";
+             ('','$email','$hashword');";
     
     $db->exec($query);
     echo '<div><p>there is something in the database now. </p></div>';
