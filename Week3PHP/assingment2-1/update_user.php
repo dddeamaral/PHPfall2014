@@ -12,7 +12,7 @@
         $zip = $_POST['zip'];
         $phone = $_POST['phone'];
         $error_message = '';
-        var_dump($_POST);
+        
         if(!is_numeric($phone)){
             $error_message = "Your phone number must be only in digits";
             include ('Errorpage.php');
@@ -25,7 +25,7 @@
         } else
         {
             
-            echo "hello";
+           
             $db = new PDO("mysql:host=localhost;dbname=phpclassfall2014", "root", "");
 
             $dbs = $db->prepare('UPDATE users SET fullname = :name, email = :email, zip = :zip, phone = :phone  WHERE id = :id');
@@ -40,7 +40,7 @@
             echo '<h1> user ', $id,' was updated</h1>';
             } else {
              echo '<h1> user ', $id,' was <strong>NOT</strong> updated.</h1>';
-             var_dump($db->errorInfo());
+            
             }       
             
         }

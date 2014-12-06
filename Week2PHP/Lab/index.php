@@ -11,7 +11,18 @@
     <h1>Future Value Calculator</h1>
     <?php if (!empty($error_message)) { ?>
         <p class="error"><?php echo $error_message; ?></p>
-    <?php } // end if ?>
+    <?php } ?>
+        
+        
+        
+        <?php
+        
+        if (empty($investment)){$investment = rand();}
+        if (empty($interest_rate)){$interest_rate = rand(0, 15);}
+        if (empty($years)){$years = rand(0, 50);}
+        
+        
+        ?>
     <form action="display_results.php" method="post">
 
         <div id="data">

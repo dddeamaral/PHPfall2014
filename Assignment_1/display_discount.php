@@ -23,7 +23,7 @@
       } else if (!is_numeric($list_price)){
           $err_msg = 'Please enter only digits for list price';
       } else if (is_numeric($product_description)){
-          $err_msg = 'Please only enter non numeric characters';
+          $err_msg = 'Please only enter non numeric characters for the prodcut description.';
       } else if (!is_numeric($discount_percent)){
           $err_msg = 'Please enter a discount percent that only contains numbers';
       } else {
