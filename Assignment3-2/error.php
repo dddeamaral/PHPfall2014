@@ -9,7 +9,11 @@
 
 <body>
         <h2>There was a problem...</h2>
-        <p><?php $errorASD = print_r($error);    echo($errorASD); ?></p>
+        <ul><?php foreach($error as $errors) : ?>
+            <li><?php echo $errors;?></li>
+            <?php endforeach;?>
+        </ul>
+        
         <p><a href="index.php">Return to index</a></p>
         
 

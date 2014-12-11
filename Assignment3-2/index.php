@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <body>
-       
+        <h1>Log in Page</h1>
         <form action="addingtodatabase.php" method="post">
             
             <label>Email:</label>
