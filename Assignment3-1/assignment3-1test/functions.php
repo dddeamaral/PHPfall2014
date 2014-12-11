@@ -13,6 +13,7 @@ function valid_email($email){
 
 function is_in_database($email){
   
+    $db = new PDO('mysql:host=localhost;dbname=phpclassfall2014', 'root', '' );
     $dbs= $db->prepare('SELECT * FROM signup WHERE email = :email');
     $dbs->bindParam(':email', $email, PDO::PARAM_STR);
     
@@ -33,10 +34,10 @@ function valid_password($password){
 
 function search_database($password, $email){
      
-    include_once('database.php');
+    $db = new PDO('mysql:host=localhost;dbname=phpclassfall2014', 'root', '' );
     $dbs = $db->prepare('SELECT * FROM signup WHERE email = :email AND password = :password');
     $dbs->bindParam(':email', $email, PDO::PARAM_STR);
-    $dbs->bindParam(':password', $hashword, PDO::PARAM_STR);
+    $dbs->bindParam(':password', $password, PDO::PARAM_STR);
     
     if($dbs->execute() && $dbs->rowCount() > 0){
         return true;
