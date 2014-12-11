@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <body>
-        <h1>Log in Page</h1>
+       <?php include 'header.php';  ?>
         <form action="addingtodatabase.php" method="post">
             
             <label>Email:</label>

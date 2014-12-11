@@ -14,7 +14,7 @@
             <?php endforeach;?>
         </ul>
         
-        <p><a href="index.php">Return to index</a></p>
+        <p><a href="login.php">Return to index</a></p>
         
 
 </body>
