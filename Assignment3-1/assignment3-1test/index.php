@@ -5,6 +5,8 @@
     </head>
     <body>
        
+        <a href="signup.php">Sign Up</a>
+        
         <form action="addingtodatabase.php" method="post">
             
             <label>Email:</label>
