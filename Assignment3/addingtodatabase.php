@@ -14,7 +14,7 @@ if (empty($passwords)){
     $error = "your password must not be blank.";
     include('error.php'); 
 } 
-if(strlen($passwords)< 4){
+if(strlen($passwords)< 5){
     $error = "Your password must be at least 4 characters long.";
     include('error.php');
 } else {
