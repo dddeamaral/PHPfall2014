@@ -19,7 +19,9 @@ function is_in_database($email){
     
     if($dbs->execute() && $dbs->rowCount() > 0){
         return true;
-    } else{
+    } 
+    else
+    {
         return false;
     }
 }
