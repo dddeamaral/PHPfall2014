@@ -42,9 +42,12 @@ public function is_in_database( $email ){
 
 public function valid_password( $password ){
     
-    if (isset($password) && strlen($password) > 4){
+    if ( isset($password) && strlen($password) > 4 )
+        {
         return true;
-    } else {
+    } 
+    else 
+        {
         return false;
     }
 }
